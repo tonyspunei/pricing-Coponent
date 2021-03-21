@@ -72,6 +72,7 @@
         color: $grayishBlue;
       }
     }
+    // Increse Cicle
 
     .increaseCircle {
       height: 9px;
@@ -98,6 +99,61 @@
         cursor: pointer;
         box-shadow: 0px 0px 20px $strongCyan;
       }
+    }
+
+    // Slide Container
+    .slidecontainer {
+      width: 100%;
+      border-radius: 1rem;
+
+      @include breapoint-up(large) {
+        height: 24px;
+        margin-bottom: 52px;
+      }
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 2rem;
+      background: hsl(224, 65%, 95%);
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: hsl(174, 86%, 45%);
+      background-image: url(/images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 65% 30%;
+      box-shadow: 0px 0px 20px hsl(174, 86%, 45%);
+      cursor: pointer;
+
+      @include breapoint-up(large) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4caf50;
+      cursor: pointer;
     }
 
     .billiongSwitch {
