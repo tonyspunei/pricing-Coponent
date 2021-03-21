@@ -1,0 +1,345 @@
+.container {
+  position: absolute;
+  top: 492px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 90%;
+  background: $white;
+  box-shadow: 0px 30px 40px 10px hsla(222, 49%, 87%, 0.555);
+  border-radius: 17px;
+
+  // padding-top: 35px;
+  // padding-left: 24px;
+  // padding-right: 24px;
+
+  @include breapoint-up(large) {
+    top: 445px;
+    height: 397px;
+    width: 540px;
+    // padding-top: 0px;
+    // padding-left: 44px;
+    // padding-right: 44px;
+  }
+
+  .pageviewsPayment {
+    height: 378px;
+    width: 100%;
+    margin-bottom: 16px;
+    flex-direction: column;
+
+    @include breapoint-up(medium) {
+      margin-bottom: 28px;
+    }
+
+    @include breapoint-up(large) {
+      flex-direction: row;
+      margin: 0px;
+    }
+  }
+
+  &__topInfo {
+    height: 246px;
+    width: 100%;
+
+    padding-top: 35px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @include breapoint-up(large) {
+      padding-top: 0px;
+      padding-left: 44px;
+      padding-right: 44px;
+    }
+
+    .pageviews {
+      h3 {
+        font-size: 17px;
+        color: $grayishBlue;
+        letter-spacing: 3px;
+      }
+    }
+
+    .paymentBill {
+      h1 {
+        font-size: 40px;
+        color: $darkDesaturatedBlue;
+        margin-right: 6px;
+      }
+
+      h3 {
+        font-size: 12px;
+        color: $grayishBlue;
+      }
+    }
+
+    .increaseCircle {
+      height: 9px;
+      width: 276px;
+      border-radius: 1rem;
+      background: $lightGrayishBlue1;
+      position: relative;
+
+      @include breapoint-up(large) {
+        height: 24px;
+        margin-bottom: 52px;
+      }
+
+      .greenCircle {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: $strongCyan;
+        cursor: pointer;
+        box-shadow: 0px 0px 20px $strongCyan;
+      }
+    }
+
+    .billiongSwitch {
+      width: 100%;
+      margin: 12px 0px;
+
+      @include breapoint-up(medium) {
+        width: 71%;
+      }
+
+      @include breapoint-up(large) {
+        width: 83%;
+      }
+      p {
+        font-size: 10px;
+        color: $grayishBlue;
+
+        @include breapoint-up(medium) {
+          font-size: 14px;
+        }
+
+        @include breapoint-up(large) {
+          font-size: 14px;
+        }
+
+        span {
+          vertical-align: middle;
+          text-align: center;
+          display: inline-block;
+          border-radius: 1rem;
+          height: 15px;
+          width: 79px;
+          margin-left: 10px;
+          background: hsla(15, 100%, 70%, 0.205);
+          color: $lightRed;
+
+          @include breapoint-up(medium) {
+            height: 20px;
+            width: 105px;
+          }
+
+          @include breapoint-up(large) {
+            height: 18px;
+            width: 100px;
+          }
+        }
+      }
+
+      .yearlyBill {
+        font-size: 10px;
+
+        @include breapoint-up(medium) {
+          font-size: 14px;
+        }
+
+        @include breapoint-up(large) {
+          font-size: 12px;
+        }
+      }
+
+      .toggle-btn {
+        position: relative;
+        width: 43px;
+        height: 22px;
+        margin: 0 auto;
+        border-radius: 40px;
+
+        @include breapoint-up(large) {
+          width: 43px;
+          height: 23px;
+          margin: 0 auto;
+        }
+      }
+
+      input[type="checkbox"] {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+      }
+
+      /* First toggle btn */
+
+      #_1st-toggle-btn span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        overflow: hidden;
+        opacity: 1;
+        background-color: #d0d8ef;
+        box-shadow: 0px 2px 25px #d9d9d9;
+        border-radius: 40px;
+        transition: 0.2s ease background-color, 0.2s ease opacity;
+      }
+
+      #_1st-toggle-btn span:before,
+      #_1st-toggle-btn span:after {
+        content: "";
+        position: absolute;
+        top: 3.7px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        transition: 0.5s ease transform, 0.2s ease background-color;
+
+        @include breapoint-up(large) {
+          top: 3.1px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      #_1st-toggle-btn span:before {
+        background-color: #fff;
+        transform: translate(-58px, 0px);
+        z-index: 1;
+      }
+
+      #_1st-toggle-btn span:after {
+        background-color: #fff;
+        transform: translate(5px, 0px);
+        z-index: 0;
+      }
+
+      #_1st-toggle-btn input[type="checkbox"]:checked + span {
+        background-color: #76edda;
+      }
+
+      #_1st-toggle-btn input[type="checkbox"]:active + span {
+        opacity: 0.5;
+      }
+
+      #_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+        background-color: #fff;
+        transform: translate(21px, 0px);
+
+        @include breapoint-up(large) {
+          transform: translate(22px, 0px);
+        }
+      }
+
+      /* First toggle btn completed */
+    }
+  }
+
+  .breakLine {
+    height: 0.5px;
+    width: 100%;
+    background: $lightGrayishBlue2;
+    margin-top: 36px;
+
+    @include breapoint-up(large) {
+      margin-top: 28px;
+    }
+  }
+
+  .footerInfo {
+    height: 218px;
+
+    @include breapoint-up(large) {
+      height: 122px;
+      flex-direction: row;
+    }
+
+    &__benefitsInfo {
+      width: 100%;
+      margin-top: 29px;
+
+      @include breapoint-up(large) {
+        margin-top: 0px;
+        align-items: start;
+        margin-left: 44px;
+        justify-content: center;
+      }
+
+      .benefit {
+        &:first-child {
+          margin-top: 0px;
+
+          @include breapoint-up(large) {
+            // margin-top: 10px;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+
+          @include breapoint-up(large) {
+            margin-bottom: 13px;
+          }
+        }
+
+        svg {
+          margin-right: 12px;
+        }
+
+        p {
+          color: $grayishBlue;
+          font-size: 14px;
+
+          @include breapoint-up(large) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .trialButton {
+      height: 41px;
+      width: 190px;
+      margin-top: 22px;
+      cursor: pointer;
+
+      @include breapoint-up(large) {
+        width: 255px;
+      }
+
+      border-radius: 2rem;
+      background: $darkDesaturatedBlue;
+      color: $paleBlue;
+      font-family: "Manrope", sans-serif;
+      font-size: 12px;
+
+      transition: color 150ms ease-in-out;
+
+      &:hover {
+        color: $white;
+      }
+
+      @include breapoint-up(large) {
+        margin-top: 0px;
+        margin-right: 44px;
+      }
+    }
+  }
+}

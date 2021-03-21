@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/app/scss/style.css" />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="topBackground flex flex-ai-c flex-fd-c">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="backgroundCircles"
+          width="146"
+          height="145"
+        >
+          <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
+            <circle cx="63" cy="82" r="62.5" />
+            <circle cx="105" cy="41" r="40.5" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="container">
+        <!-- Top Info | pageviews + payment bill -->
+        <div class="container__topInfo flex flex-ai-c flex-fd-c flex-jc-c">
+          <div class="pageviewsPayment flex flex-ai-c flex-jc-sb">
+            <div class="pageviews">
+              <h3>100K PAGEVIEWS</h3>
+            </div>
+
+            <div class="increaseCircle phone">
+              <div class="greenCircle flex flex-ai-c flex-jc-c">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13">
+                  <g fill="#80FFF3" fill-rule="evenodd">
+                    <path
+                      d="M16 2.558v7.884a1 1 0 001.735.679l3.639-3.943a1 1 0 000-1.356l-3.64-3.943A1 1 0 0016 2.558zM6 2.558v7.884a1 1 0 01-1.735.679L.626 7.178a1 1 0 010-1.356l3.64-3.943A1 1 0 016 2.558z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <div class="paymentBill flex flex-ai-c">
+              <h1>$16.00</h1>
+              <h3>/ month</h3>
+            </div>
+          </div>
+
+          <div class="increaseCircle desktop">
+            <div class="greenCircle flex flex-ai-c flex-jc-c">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13">
+                <g fill="#80FFF3" fill-rule="evenodd">
+                  <path
+                    d="M16 2.558v7.884a1 1 0 001.735.679l3.639-3.943a1 1 0 000-1.356l-3.64-3.943A1 1 0 0016 2.558zM6 2.558v7.884a1 1 0 01-1.735.679L.626 7.178a1 1 0 010-1.356l3.64-3.943A1 1 0 016 2.558z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="billiongSwitch flex flex-ai-c flex-jc-sa">
+            <p>Monthly Billing</p>
+            <div class="toggle-btn" id="_1st-toggle-btn">
+              <input type="checkbox" />
+              <span></span>
+            </div>
+            <p class="yearlyBill">Yearly Billing <span>25% discount</span></p>
+          </div>
+        </div>
+
+        <div class="breakLine"></div>
+
+        <div class="footerInfo flex flex-fd-c flex-ai-c">
+          <div
+            class="footerInfo__benefitsInfo flex flex-fd-c flex-ai-c flex-jc-fs"
+          >
+            <span class="benefit flex flex-ai-c">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              <p>Unlimited websites</p>
+            </span>
+
+            <span class="benefit flex flex-ai-c">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              <p>100% data ownership</p>
+            </span>
+
+            <span class="benefit flex flex-ai-c">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                <path
+                  fill="none"
+                  stroke="#10D8C4"
+                  stroke-width="2"
+                  d="M1 4.134l1.907 1.908L7.949 1"
+                />
+              </svg>
+              <p>Email reports</p>
+            </span>
+          </div>
+
+          <button class="trialButton">Start my trial</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
